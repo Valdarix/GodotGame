@@ -490,3 +490,5 @@ position = Vector2(81, 253)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzones/Killzone"]
 position = Vector2(7, 4)
 shape = SubResource("WorldBoundaryShape2D_gm3kh")
+
+[node name="Enemies" type="Node" parent="."]
