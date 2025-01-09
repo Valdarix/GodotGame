@@ -1,7 +1,9 @@
-[gd_scene load_steps=30 format=3 uid="uid://dc1pynlhaga1n"]
+[gd_scene load_steps=32 format=3 uid="uid://dc1pynlhaga1n"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_ofq0v"]
 [ext_resource type="Texture2D" uid="uid://bdtx6qdn3idrs" path="res://Assets/sprites/knight.png" id="1_rifeq"]
+[ext_resource type="AudioStream" uid="uid://tgk2sic1a72w" path="res://Assets/sounds/jump.wav" id="3_28aft"]
+[ext_resource type="AudioStream" uid="uid://bkvj32tkvso84" path="res://Assets/sounds/hurt.wav" id="4_2wj2m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6qi8y"]
 atlas = ExtResource("1_rifeq")
@@ -212,9 +214,17 @@ script = ExtResource("1_ofq0v")
 [node name="PlayerAnim" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_nb3jx")
-animation = &"death"
+animation = &"jump"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_a0yth")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_28aft")
+bus = &"SFX"
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_2wj2m")
+bus = &"SFX"
