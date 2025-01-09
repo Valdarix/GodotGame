@@ -120,7 +120,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"death",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -209,7 +209,7 @@ z_index = 5
 collision_layer = 2
 script = ExtResource("1_ofq0v")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="PlayerAnim" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_nb3jx")
 animation = &"death"
